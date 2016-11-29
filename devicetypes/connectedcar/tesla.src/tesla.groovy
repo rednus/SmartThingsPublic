@@ -16,7 +16,7 @@
 metadata {
 	definition (name: "Tesla", namespace: "connectedcar", author: "Shyam Avvari") {
         capability "Battery" //using for soc
-        //capability "Actuator" //using to lock/unlock
+        capability "Actuator" //using to lock/unlock
 		capability "Lock" //using to lock/unlock
         capability "Refresh" //using to get the car status
         //capability "Power"
@@ -24,7 +24,13 @@ metadata {
         //cabin climate
         capability "Thermostat" //using for car climate
         capability "Temperature Measurement"
-        //capability "Switch" //using this to switch on car climate from alexa
+        capability "Thermostat Cooling Setpoint"
+        capability "Thermostat Heating Setpoint"
+        capability "Thermostat Fan Mode"
+        capability "Thermostat Mode"
+        capability "Thermostat Operating State"
+        capability "Thermostat Setpoint"
+        capability "Switch" //using this to enable control from alexa
         
         //not working
         attribute "distUnit", "enum", ["km", "mi"]
